@@ -1,0 +1,54 @@
+html {
+  background-image: url(./background.jpeg);
+}
+
+body {
+  height: 95%;
+  width: 95%;
+  background-color: rgba(64, 163, 167, 0.951);
+  margin-left: 2.5%;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 64;
+  padding-top: 1%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+section {
+  margin-bottom: 7%;
+  margin-left: 2%;
+  width: 31.3%;
+  height:27%;
+  float: left;
+
+}
+
+h2 {
+  font-size: 32;
+  font-weight: 680;
+  margin-bottom: 1%;
+  font-variant: small-caps;
+}
+
+h4 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: smaller;
+}
+
+h5 {
+  margin-left: 22.5%;
+  margin-bottom: 1%;
+  font-size: 18;
+  font-weight: 600;
+}
+
+p {
+  text-indent: 12%;
+  width: 60%;
+  font-size: 16;
+  margin-top: 2%;
+}
