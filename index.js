@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
   const APIReturn = await response.json();
   //grab the data I need from the object
   const partyData = APIReturn.data;
-  //render the data fetched for the API to secions, and append them to <main>
+  //render the data fetched frm the API to sections, and append them to <main>
   renderPartyData = partyData.forEach(party => {
     partySection = document.createElement(`section`);
     partySection.innerHTML = `
