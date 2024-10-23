@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', async (event) => {
   const APIReturn = await response.json();
   //grab the data I need from the object
   const partyData = APIReturn.data;
-
+  //render the data fetched for the API to secions, and append them to <main>
   renderPartyData = partyData.forEach(party => {
     partySection = document.createElement(`section`);
-    buttonSection = document.createElement(`section`)
     partySection.innerHTML = `
     <h2>${party.name}</h2>
     <h4>Date & Time: ${party.date}</h4>
@@ -22,42 +21,52 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     `
     main.append(partySection);
   });
-  renderPartyData();
-  
-
-
-
-
-
-
-
-  //OLD DISCARDED CODE:
-  
-  //map out the names from the array
-  // const partyNames = partyData.map((party) => {
-  //   return party.name;
-  // });
-  // //map out locations from the array
-  // const partyLocations = partyData.map((party) => {
-  //   return party.location;
-  // });
-  // //map out dates from the array
-  // const partyDates = partyData.map((party) => {
-  //   return party.date
-  // });
-  // //map out party descriptions from the array
-  // const partyDescriptions = partyData.map((party) => {
-  //   return party.description
-  // });
-  // //create a section for each event and put it in the <main> element
-  // // const eventSection = document.createElement(`section`)
-  // // eventSection.innerHTML = `
-  // //   <h2>${}
-  // // `
-  // console.log(partyData);
-  // console.log(partyNames);
-  // console.log(partyLocations);
-  // console.log(partyDates);
-  // console.log(partyDescriptions);
 });
 
+//add an event listener to the button and take the user an interface that allows them to fill out a form
+document.addEventListener(`click`, (event) => {
+  if(event.target.tagName === `BUTTON`) {
+    const renderNewPartyForm = () => {
+      main.innerHTML = `
+      <form>
+        <input placeholder="Your Name"></input>
+        <input placeholder="Your Event"</input>
+        <input placeholder="Event Date and Time"</input>
+        <input placeholder="Event Location"></input>
+        <input id="describe-input" placeholder="Please briefly describe your event"></input>
+      </form>
+      `
+    }
+  renderNewPartyForm();
+   }
+});
+
+
+//OLD DISCARDED CODE:
+
+//map out the names from the array
+// const partyNames = partyData.map((party) => {
+//   return party.name;
+// });
+// //map out locations from the array
+// const partyLocations = partyData.map((party) => {
+//   return party.location;
+// });
+// //map out dates from the array
+// const partyDates = partyData.map((party) => {
+//   return party.date
+// });
+// //map out party descriptions from the array
+// const partyDescriptions = partyData.map((party) => {
+//   return party.description
+// });
+// //create a section for each event and put it in the <main> element
+// // const eventSection = document.createElement(`section`)
+// // eventSection.innerHTML = `
+// //   <h2>${}
+// // `
+// console.log(partyData);
+// console.log(partyNames);
+// console.log(partyLocations);
+// console.log(partyDates);
+// console.log(partyDescriptions);
